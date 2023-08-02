@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+				content="Gulp pack for easy html/php markup development">
+	<meta name="keywords"
+				content="">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.svg"
+				type="image/svg+xml">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.webp"
+				type="image/webp">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.png"
+				type="image/x-icon">
+	<link rel="stylesheet"
+				href="css/libs.min.css">
+	<link rel="stylesheet"
+				href="css/style.css">
+	<title>lecristal</title>
+</head>
+
+
+<body>
+	<header class="header">
+    <div class="container h-100">
+        <div class="header-wrap row">
+            <div class="col-4 order-lg-0 order-1">
+                <div class="header-logo">
+                    <picture>
+                        <source media="(max-width: 991px)" srcset="img/logo.svg">
+                        <img src="img/logo.svg" alt="">
+                    </picture>
+
+                </div>
+            </div>
+            <div class="col-lg-2 col-4 order-lg-1 order-0">
+                <div class="header-menu">
+                    <div class="header-menu__lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="text">
+                        Меню
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-4 order-2">
+                <div class="header-links">
+                    <div class="header-links__contacts">
+                        <div class="header-links__contacts-phone">
+                            <img src="img/phone.svg" alt="">
+                            <a href="" >
+                                +7 347 226-17-91
+                            </a>
+                        </div>
+                        <p>г. Уфа, ул. Братьев Кадомцевых, д. 17</p>
+                    </div>
+
+                    <a href="" class="btn btn-primary" data-fancybox data-src="#callorder">УЗНАТЬ ПОДРОБНЕЕ</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <nav class="navigation">
+        <ul class="navigation__list">
+            <li><a href="">Локация и окружение</a></li>
+            <li><a href="">Архитектура и лобби</a></li>
+            <li><a href="">Дата-центр и Face ID</a></li>
+            <li><a href="">Зеленые технологии</a></li>
+            <li><a href="">Здоровье и рекреация</a></li>
+            <li><a href="">Галерея</a></li>
+            <li><a href="">Ипотека и рассрочка</a></li>
+            <li><a href="">Контакты</a></li>
+        </ul>
+
+        <div class="navigation-links d-lg-none d-block">
+            <div class="navigation-links__contacts">
+                <div class="navigation-links__contacts-phone">
+                    <img src="img/phone.svg" alt="">
+                    <a href="" >
+                        +7 347 226-17-91
+                    </a>
+                </div>
+                <p>г. Уфа, ул. Братьев Кадомцевых, д. 17</p>
+            </div>
+        </div>
+    </nav>
+</header>
+
+	<main class="main">
+        
+        <section class="error-container">
+    <div class="error-title">404</div>
+    <div class="error-text mb-60">Страница с таким <br> адресом была удалена <br> или никогда не существовала</div>
+    <a href="/" class="btn btn-primary">На главную</a>
+
+    <img src="img/pattern-vertical.svg" class="error-pattern error-pattern__1 pattern-vertical" alt="">
+    <img src="img/pattern-vertical-reversed.svg" class="error-pattern error-pattern__2 pattern-vertical" alt="">
+</section>
+	</main>
+	<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-12 order-0">
+                <div class="footer__logo">
+                    <picture>
+                        <source media="(max-width: 991px)" srcset="img/logo-bottom-mobile.png">
+                        <img src="img/logo.svg" alt="">
+                    </picture>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 order-lg-1 order-2">
+                <div class="footer__socials">
+                    <div class="footer__socials-item h5 text-primary">
+                        <img src="img/phone.svg" alt="">
+                        Telegram
+                    </div>
+                    <div class="footer__socials-item h5 text-primary">
+                        <img src="img/phone.svg" alt="">
+                        Telegram
+                    </div>
+                    <div class="footer__socials-item h5 text-primary">
+                        <img src="img/phone.svg" alt="">
+                        Telegram
+                    </div>
+                    <div class="footer__socials-item h5 text-primary">
+                        <img src="img/phone.svg" alt="">
+                        Telegram
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 order-lg-2 order-1">
+                <div class="footer__contacts">
+                    <div class="header-links__contacts-phone">
+                        <img src="img/phone.svg" alt="">
+                        <a href="">
+                            201-00-00
+                        </a>
+                    </div>
+   
+                    <a href="" class="btn btn-primary">Заказать звонок</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="footer__policy text-primary">
+                    (c) 2023, Все права защищены. <a href="">Политика конфедициальности.</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+	<script src="js/libs.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=0efa812f-58cf-4268-b971-d5a872e39335&lang=ru_RU&onload=initMaps" type="text/javascript"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>
