@@ -1,0 +1,69 @@
+.main-developer
+{
+    padding: 10rem 0 26.5rem 0;
+    position: relative;
+    &__background
+    {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.3);
+        z-index: -1;
+    }
+    &__card
+    {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+        padding-left: 2rem;
+        height: 41.5rem;
+        border-left: 1px solid $primary;
+        img
+        {
+            width: 8.8rem;
+            height: 5rem;
+            object-fit: contain;
+            margin-bottom: 11+rem;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .main-developer
+    {
+        &__cards
+        {
+            row-gap: 82px;
+        }
+        &__card
+        {
+            padding-top: 0;
+            padding-left: 2rem;
+            height: 190px;
+            border-left: 1px solid $primary;
+            img
+            {
+                width: 35px;
+                height: 26px;
+                object-fit: contain;
+                margin-bottom: 28px;
+            }
+            .h2
+            {
+                font-size: 22px;
+            }
+            .h5
+            {
+                font-size: 12px;
+                margin-bottom: 22px;
+            }
+            p
+            {
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,152 @@
+#progress
+{
+    position: relative;
+    padding-bottom: 10rem;
+    border-bottom: 1px solid $primary; 
+}
+.progress__pattern
+{
+    
+    &-1
+    {
+        position: absolute;
+        top: 21rem;
+        right: 23rem;
+    }
+    &-2
+    {
+        position: absolute;
+        top: 100rem;
+        right: 8rem;
+    }
+    &-3
+    {
+        position: absolute;
+        right: 22rem;
+        bottom: 35rem;
+    }
+    &-4,
+    &-5
+    {
+        display: none;
+    }
+}
+.progress-list
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8rem;
+    &__item
+    {
+        &-top
+        {
+            margin-bottom: 4.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            color: $primary;
+            .name
+            {
+                
+                font-size: 5rem;
+                font-weight: 400;
+                line-height: 110.5%;
+                text-transform: uppercase;
+            }
+            .date
+            {
+                color: #F5F5F5;
+                text-align: right;
+                font-size: 2.2rem;
+                font-weight: 400;
+            }
+        }
+        &-img
+        {
+            position: relative;
+            cursor: pointer;
+            &::after
+            {
+                content: '';
+                display: block;
+                padding-top: 60%;
+                
+            }
+            img
+            {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    
+}
+@media (max-width: 991px) {
+    
+    #progress
+    {
+        .h1
+        {
+            text-align: center;
+        }
+    }
+    .progress__pattern
+    {
+        
+        &-4
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            display: block;
+            width: 100% !important;
+            aspect-ratio: 1/1 !important;
+            height: auto !important;
+            z-index: -1;
+        }
+        &-5
+        {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+            display: block;
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 1/1 !important;
+            z-index: -1;
+        }
+        &-1,
+        &-2,
+        &-3
+        {
+            display: none;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .progress-list
+    {
+        row-gap: 25px;
+        &__item
+        {
+            &-top
+            {
+                .name
+                {
+                    font-size: 20px;
+                }
+                .date
+                {
+                    font-size: 10px;
+                }
+            }
+        }
+        
+    }
+}

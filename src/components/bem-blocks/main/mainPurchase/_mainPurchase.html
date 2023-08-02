@@ -1,0 +1,47 @@
+<section class="main-purchase pattern-mobile bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="h1 text-primary-bg mb-80">СПОСОБЫ ПОКУПКИ</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 offset-lg-1">
+                <div class="h3 text-up mb-40">Подберём выгодную ипотеку и поможем получить одобрение банка</div>
+                <ul class="main-purchase__list h3">
+                    <li>Ипотека</li>
+                    <li>Оплата наличными</li>
+                    <li>Материнский капитал</li>
+                </ul>
+            </div>
+            <div class="col-lg-4 offset-lg-1 col-12">
+                <div class="main-purchase__form">
+                    <div class="h5">Мы перезвоним и обсудим детали.</div>
+                    <form action="">
+                        <input class="form-control" placeholder="Ваше имя" type="text" name="" id="">
+                        <input class="form-control" placeholder="Телефон" type="text" name="" id="">
+                        <button class="btn btn-primary dark" type="submit">отправить</button>
+                        <div class="custom-checkbox">
+                            <label class="custom-checkbox__label">
+                                <input type="checkbox" id="callorderCheckbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <div class="custom-checkbox__text">Нажимая кнопку, вы соглашаетесь <br>на обработку персональных данных</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row main-purchase__bank-row">
+            @@for (var i = 0; i < 8 ; i++) {
+            <div class="col-lg-3 col-6">
+                <div class="main-purchase__bank">
+                    <img src="img/sberbank.svg" alt="">
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+    <img class="main-purchase__pattern-1 pattern-vertical big pattern-paralax" src="img/pattern-vertical.svg" alt="">
+    <img class="main-purchase__pattern-2 pattern-vertical big pattern-paralax" src="img/pattern-vertical.svg" alt="">
+</section>

@@ -1,0 +1,167 @@
+<section id="flatsFilter">
+    <div class="container pt-80">
+        <div class="flats-filter__head">
+            <div class="h1 text-primary mb-80">РАЗРЕШИТЕЛЬНАЯ <br> ДОКУМЕНТАЦИЯ</div>
+            <div class="flats-filter__head-chose">
+                <a class="btn btn-primary" href="#">НА ГЕНПЛАНЕ</a>
+                <a class="btn btn-primary" href="#">ПО ПАРАМЕТРАМ</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 col-12">
+                <form class="flats-filter__form">
+                    <div class="flats-filter__form-item">
+                        <div class="flats-filter__form-label">Холл</div>
+                        <div class="flats-filter__form-options">
+                            <div class="flats-filter__form-option">
+                                <input type="checkbox" name="halls" id="A" value="A" checked>
+                                <label for="A">А</label>
+                            </div>
+                            <div class="flats-filter__form-option">
+                                <input type="checkbox" name="halls" id="B" value="B">
+                                <label for="B">Б</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flats-filter__form-item">
+                        <div class="flats-filter__form-label">Количество комнат</div>
+                        <div class="flats-filter__form-options">
+                            <div class="flats-filter__form-option">
+                                <input type="checkbox" name="rooms" id="rooms_st" value="st">
+                                <label for="rooms_st">СТ</label>
+                            </div>
+                            <div class="flats-filter__form-option">
+                                <input type="checkbox" name="rooms" id="rooms_1" value="1">
+                                <label for="rooms_1">1</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flats-filter__form-item">
+                        <div class="flats-filter__form-label range">Цена, млн ₽</div>
+                        <input type="text" data-range
+                        data-type="double"
+                        data-min="0"
+                        data-max="1000">
+                    </div>
+                    <div class="flats-filter__form-item">
+                        <div class="flats-filter__form-label range">Площадь, м2</div>
+                        <input type="text" data-range
+                        data-type="double"
+                        data-min="0"
+                        data-max="1000">
+                    </div>
+                    <div class="flats-filter__form-item">
+                        <div class="flats-filter__form-label range">Этаж</div>
+                        <input type="text" data-range
+                        data-type="double"
+                        data-min="0"
+                        data-max="1000">
+                    </div>
+                    <div class="custom-checkbox flats-filter__form-unique">
+                        <label class="custom-checkbox__label">
+                            <input type="checkbox" id="callorderCheckbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <div class="custom-checkbox__text">Показывать только уникальные планировки</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-ft flats-filter__form-submit">Показать</button>
+                </form>
+            </div>
+            <div class="col-lg-8 col-12 offset-lg-1 offset-0">
+                <div class="flats-filter__result">
+                    <div class="flats-filter__result-number">Найдено 60 квартир</div>
+                    <div class="flats-filter__visual">
+                        <div class="flats-filter__visual-type active" onclick="changeFlatsVisual(this, document.querySelector('#flatsChess'))">
+                            <img src="img/type__chess.svg" alt="">
+                            плитка
+                        </div>
+                        <div class="flats-filter__visual-type" onclick="changeFlatsVisual(this, document.querySelector('#flatsList'))">
+                            <img src="img/type__list.svg" alt="">
+                            список
+                        </div>
+                    </div>
+                    <div class="flats-visual" id="flatsChess">
+                        <div class="flats-filter__flats-chess">
+                            @@for (var i = 0; i < 8; i++) {
+                                <div class="flats-filter__card">
+                                    <div class="flats-filter__card-name">1 комната №140</div>
+                                    <div class="flats-filter__card-img">
+                                        <img src="img/flat.png" alt="">
+                                    </div>
+                                    <div class="flats-filter__card-body">
+                                        <ul class="flats-filter__card-body__props">
+                                            <li>
+                                                <div>Этаж</div>
+                                                <div>17</div>
+                                            </li>
+                                            <li>
+                                                <div>Площадь</div>
+                                                <div>39,76 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="flats-filter__card-buttons">
+                                        <a href="" class="btn btn-primary w-ft">УЗНАТЬ ЦЕНУ</a>
+                                        <a href="" class="btn btn-primary dark w-ft">ПОДРОБНЕЕ</a>
+                                    </div>
+                                </div>
+                              }
+                        </div>
+                        <div class="pagination_flats">
+                            <a href="" class="pagination-button prev"></a>
+                            <ul class="pagination">
+                                <li class="pagination-button"><a href="">1</a></li>
+                                <li class="pagination-button"><a href="">2</a></li>
+                                <li class="pagination-button"><a href="">3</a></li>
+                                <li class="pagination-button"><a href="">4</a></li>
+                                <li class="pagination-button"><a href="">...</a></li>
+                                <li class="pagination-button"><a href="">18</a></li>
+                            </ul>
+                            <a href="" class="pagination-button next"></a>
+                        </div>
+                    </div>
+
+                    <div class="flats-filter__flats-list flats-visual d-none" id="flatsList">
+                        <div class="flats__list-top">
+                            <div class="flats__list-item flats__list-top-item">
+                                <div class="flats__list-top-item__btn">Номер
+                                    <a href="javascript:;" class="d-lg-block d-none" data-sort="number" data-order="desc"><img src="/img/filterDown.svg" alt=""></a>
+                                    <a href="javascript:;" class="d-lg-block d-none" data-sort="number" data-order="asc"><img src="/img/filterUp.svg" alt=""></a>
+                                </div>
+                                <div class="flats__list-top-item__btn">Этаж
+                                    <a href="javascript:;" class="d-lg-block d-none" data-sort="floor" data-order="desc"><img src="/img/filterDown.svg" alt=""></a>
+                                    <a href="javascript:;" class="d-lg-block d-none" data-sort="floor" data-order="asc"><img src="/img/filterUp.svg" alt=""></a>
+                                </div>
+                                <div class="flats__list-top-item__btn">Площадь
+                                    <a href="javascript:;" class="d-lg-block d-none" data-sort="area" data-order="desc"><img src="/img/filterDown.svg" alt=""></a>
+                                    <a href="javascript:;" class="d-lg-block d-none" data-sort="area" data-order="asc"><img src="/img/filterUp.svg" alt=""></a>
+                                </div>
+                                <div class="flats__list-top-item__btn">Комнат
+                                    <a href="javascript:;" class="d-lg-block d-none" data-sort="rooms" data-order="desc"><img src="/img/filterDown.svg" alt=""></a>
+                                    <a href="javascript:;" class="d-lg-block d-none" data-sort="rooms" data-order="asc"><img src="/img/filterUp.svg" alt=""></a>
+                                </div>
+                                <div class="flats__list-top-item__btn">Цена
+                                    <a href="javascript:;" class="d-lg-block d-none" data-sort="rooms" data-order="desc"><img src="/img/filterDown.svg" alt=""></a>
+                                    <a href="javascript:;" class="d-lg-block d-none" data-sort="rooms" data-order="asc"><img src="/img/filterUp.svg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        @@for (var i = 0; i < 8; i++) {
+                        <div class="flats__list-item">
+                            <div>140</div>
+                            <div>17</div>
+                            <div>39.76</div>
+                            <div>1</div>
+                            <div>10 000 000</div>
+                            <div class="flats__list-item__btn">
+                                <a href="" class="btn-primary dark">Бронировать</a>
+                            </div>
+                        </div>
+                          }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

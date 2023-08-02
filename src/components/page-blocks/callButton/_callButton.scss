@@ -1,0 +1,92 @@
+.callButton-wrap
+{
+  position: fixed;
+  left: 20px;
+  bottom: 100px;
+  cursor: pointer;
+  z-index: 999;
+}
+.callButton-svg
+{
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+  border: 2px solid $dark;
+  
+  border-radius: 50%;
+}
+@media (max-width: 991px) {
+  .callButton-svg
+  {
+    width: 60px;
+    height: 60px;
+  }
+  .callButton-wrap
+  {
+    bottom: 75px;
+  }
+}
+@media (max-width: 576px) {
+  .callButton-svg
+  {
+    width: 45px;
+    height: 45px;
+  }
+}
+.callButton-svg svg
+{
+  width: 40%;
+  height: 40%;
+}
+.callButton-inner
+{
+  position: absolute;
+  bottom: 120%;
+  padding: 20px;
+  left: 0 ;
+  width: 20ch;
+  transform-origin: 0 100%;
+  transform: scaleY(0);
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+  font-size: 2rem;
+  background-color: #FFF;
+  color: #000;
+  border-radius: 10px;
+  z-index: 500;
+}
+.callButton-wrap.open .callButton-inner
+{
+  transform: scaleY(1);
+  opacity: 1;
+  overflow: visible;
+}
+
+.callButton-inner-item
+{
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.callButton-inner-item img
+{
+  height: 100%;
+  width: 2rem;
+}
+
+@media (max-width: 768px)
+{
+  .callButton-svg
+  {
+    display: none;
+  }
+}

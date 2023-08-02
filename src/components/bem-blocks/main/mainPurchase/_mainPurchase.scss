@@ -1,0 +1,130 @@
+.main-purchase
+{
+    color: #6f757c;
+    position: relative;
+    padding: 9rem 0;
+    &__form
+    {
+
+        padding: 4.5rem 11rem 5rem 7rem;
+        background-color: $primary;
+        .h5
+        {
+            margin-bottom: 4.5rem;
+        }
+        form
+        {
+            padding-right: 6rem;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.6rem;
+            .btn
+            {
+                margin-top: 3.9rem;
+                font-weight: 300;
+            }
+        }
+    }
+    &__list
+    {
+        line-height: 1.5em;
+    }
+    &__bank
+    {
+        padding: 1.5rem 2rem;
+        height: 8.1rem;
+        background-color: $primary-bg;
+        border: 1px solid $primary;
+        position: relative;
+        z-index: 10;
+        img
+        {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+        &-row
+        {
+            margin-top: 9rem;
+            row-gap: 2.7rem;
+        }
+    }
+    &__pattern
+    {
+        &-1
+        {
+            position: absolute;
+            z-index: 10;
+            right: 5rem;
+            top: 6rem;
+            z-index: 0;
+        }
+        &-2
+        {
+
+            position: absolute;
+            z-index: 10;
+            left: 63rem;
+            top: calc(25% + 4rem);
+            z-index: 0;
+        }
+    }
+}
+@media (max-width: 1400px) {
+    .main-purchase
+    {
+        &__form
+        {
+            padding: 5rem;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .main-purchase
+    {
+        padding: 45px 0;
+        position: relative;
+        z-index: 50;
+        & > * 
+        {
+            position: relative;
+            z-index: 100;
+        }
+        &__list
+        {
+            margin-top: 30px;
+            margin-bottom: 17px;
+            padding-left: 1.25em;
+        }
+        &__form
+        {
+            padding: 26px 22px 32px 26px;
+            .h5
+            {
+                font-size: 24px;
+            }
+        }
+        &__bank
+        {
+            height: 60px;
+        }
+        &__pattern
+        {
+            &-1,
+            &-2
+            {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .main-purchase
+    {
+       
+        &__bank
+        {
+            height: 34px;
+        }
+    }
+}

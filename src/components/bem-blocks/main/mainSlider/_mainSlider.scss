@@ -1,0 +1,174 @@
+.main-slider
+{
+    overflow: hidden;
+    padding: 5.6rem;
+    position: relative;
+    .swiper
+    {
+        width: 100%;
+        height: 100%;
+        box-shadow: 0px 14px 16px 0px #00000040;
+    }
+
+    &__slide
+    {
+        width: 100%;
+        height: auto;
+        &-img
+        {
+            width: 100%;
+            height: 80rem;
+            img
+            {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+    }
+    &__pagination
+    {
+        position: static;
+    }
+    &__navigation
+    {
+        position: static;
+
+    }
+
+    &__content
+    {
+        width: 69rem;
+        position: absolute;
+        right: 0;
+        top: 25%;
+        padding: 5.1rem 5.5rem;
+        z-index: 200;
+        &::after
+        {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(73, 85, 97, 0.6);
+            backdrop-filter: blur(10px);
+            z-index: 199;
+            pointer-events: none;
+        }
+
+        & > *
+        {
+            position: relative;
+            z-index: 300;
+        }
+        .text
+        {
+            margin-bottom: 4.3rem;
+            font-weight: 400;
+            font-size: 5.2rem;
+            line-height: 110.5%;
+            text-transform: uppercase;
+            color: $primary;
+            h1, .h1
+            {
+                font-size: inherit;
+                color: inherit;
+                font-weight: inherit;
+                line-height: inherit;
+            }
+        }
+        .btn
+        {
+            text-transform: uppercase;
+        }
+
+    }
+    &__pattern
+    {
+        &-1
+        {
+            position: absolute;
+            z-index: 10;
+            left: 0;
+            bottom: 9rem;
+        }
+        &-2
+        {
+
+            position: absolute;
+            z-index: 10;
+            right: 0;
+            top: 5rem;
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .main-slider
+    {
+        .swiper
+        {
+            max-width: 1475px;
+        }
+    }
+    
+}
+
+@media (max-width: 991px) {
+    .main-slider
+    {
+        & > * 
+        {
+            position: relative;
+            z-index: 2;
+        }
+        padding: 26px 22px 45px 22px;
+        background-color: #626D79;
+        &__content
+        {
+            padding: 0;
+            position: static;
+            width: 100%;
+            transform: translateY(0);
+
+
+            &::after
+            {
+                display: none;
+            }
+            .text
+            {
+                font-size: 38px;
+                text-align: center;
+                margin-bottom: 13px;
+            }
+            .btn
+            {
+                display: none;
+            }
+        }
+        .main-slider__btn-mobile
+        {
+            margin-top: 28px;
+        }
+        &__pattern
+        {
+            &-1
+            {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 0;
+            }
+            &-2
+            {
+    
+                display: none;
+            }
+        }
+    }
+}

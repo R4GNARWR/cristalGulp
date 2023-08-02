@@ -1,0 +1,56 @@
+<section class="pattern-mobile" id="mainLocation">
+    <div class="main-location__wrap" >
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="h3 text-lg-primary text-primary-bg text-uppercase mb-lg-20 wow animate__fadeInUp"  data-wow-duration="2s">расположение</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 offset-lg-1 d-lg-block d-none wow animate__fadeIn" data-wow-duration="1.5s">
+                    <div class="main-location__crystal">
+                        <img src="img/crystall.svg" alt=" ">
+                        <img class="main-location__pattern-1 pattern-single" src="img/pattern-single.svg" alt="">
+                    </div>
+    
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 wow animate__fadeInUp" data-wow-duration="1.5s">
+                    <div class="h2 mb-20 text-lg-primary text-primary-bg mb-lg-15">БЛЕСТЯЩЕЕ МЕСТО</div>
+                    <p class="text-lg-primary text-primary-bg">
+                        Новый подход к культовой локации. Мерцание огней ночного города
+                        на центральной транспортной артерии мегаполиса, и ваша ослепительная
+                        походка до объектов социальной и коммерческой инфраструктуры в радиусе
+                        1 километра.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="position-relative">
+            <div
+            class="map"
+            id="mainLocationMap"
+            data-lat="54.737316"
+            data-lng="55.959147"
+            data-zoom="10" 
+            data-dots='[{"lat": "54.778279","lng": "55.825327"},{"lat": "54.776803","lng": "56.031248"}]'
+            >
+        
+            </div>
+            <div class="main-location__card">
+                <div class="main-location__card-title">Инфраструктура</div>
+                <div class="main-location__card-content">
+                    @@for (var i = 0; i < 10 ; i++) {
+                    <div class="item">
+                        <img src="img/shop.svg" alt="">
+                        <div class="text">Торговые центры</div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <img class="main-location__pattern-2 pattern-vertical" src="img/pattern-vertical.svg" alt="">
+
+</section>

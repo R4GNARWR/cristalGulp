@@ -1,0 +1,219 @@
+
+#documentsList
+{
+    border-bottom: 1px solid $primary;
+}
+.documents-list
+{
+    margin-bottom: 12.5rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar
+    {
+        width: 60px;
+    }
+
+  
+  &::-webkit-scrollbar-track
+  {
+    background-color: #A3ADB2;
+    border-left: 58px solid #85919d;
+    outline: none;
+    appearance: none;
+  }
+
+  
+  &::-webkit-scrollbar-thumb
+  {
+    background-color: #C1CBD0;
+    border-left: 56px solid #85919d;
+  }
+
+
+    &__item
+    {
+        padding: 2rem 0 3.2rem 0;
+        column-gap: 3rem;
+        border-top: 1px solid $primary;
+        color: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-name
+        {
+            font-size: 4rem;
+            font-weight: 300;
+            line-height: 1em;
+            text-transform: uppercase;
+            flex-basis: 60%;
+        }
+        &-links
+        {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-grow: 1;
+            column-gap: 4.7rem;
+            flex-shrink: 0;
+            font-size: 2rem;
+            font-weight: 700;
+            color: inherit;
+            text-decoration: none;
+            img
+            {
+                width: 4.8rem;
+                height: 4.8rem;
+                object-fit: contain;
+                flex-shrink: 0;
+            }
+            &__info
+            {
+                .size
+                {
+                    text-decoration-line: underline;
+                }
+                .date
+                {
+                    display: none;
+                }
+            }
+        }
+        &-date
+        {
+            flex-shrink: 0;
+            text-align: right;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+}
+.documents-bottom
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__btn
+	{
+		padding: 1.8rem 5rem;
+		color: #FFFFFF;
+		text-align: center;
+		font-size: 1.6rem;
+		font-family: 'Euclid Flex';
+		font-weight: 500;
+		line-height: 107%;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+        text-decoration: none;
+        background-color: #585C5D;
+	}
+	&__links
+	{
+		display: flex;
+		align-items: center;
+		column-gap: 2.5rem;
+        font-size: 8px;
+        font-weight: 700;
+		.line
+		{
+			width: 1px;
+            flex-shrink: 0;
+            flex-grow: 1;
+            align-self: stretch;
+			background-color: $primary;
+		}
+        a
+        {
+            width: calc(50% - 0.5px);
+            img
+            {
+                width: 100%;
+                aspect-ratio: 1/0.3;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+	}
+}
+
+@media (max-width: 991px) {
+    
+    #documentsList
+    {
+        .h1
+        {
+
+            text-align: center;
+        }
+    }
+    .documents-list
+    {
+        &::-webkit-scrollbar
+        {
+            width: 20px;
+        }   
+        &::-webkit-scrollbar-track
+        {
+            background-color: #A3ADB2;
+            border-left: 18px solid #85919d;
+            outline: none;
+            appearance: none;
+        }
+        
+        
+        &::-webkit-scrollbar-thumb
+        {
+            background-color: #C1CBD0;
+            border-left: 16px solid #85919d;
+        }
+        &__item
+        {
+        
+            &-name
+            {
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 17px;
+            }
+            &-links
+            {
+                img
+                {
+                    width: 24px;
+                    height: 24px;
+                }
+                &__info
+                {
+                    display: flex;
+                    flex-direction: column;
+                    .date
+                    {
+                        display: block;
+                    }
+                }
+            }
+            &-date
+            {
+                display: none;
+            }
+        }
+    }
+    .documents-bottom
+    {
+        flex-direction: column;
+        row-gap: 25px;
+        h5
+        {
+            font-size: 18px;
+        }
+        &__btn
+        {
+            padding: 13px 60px;
+            font-size: 12px;
+            letter-spacing:3px;
+        }
+        &__links
+        {
+            column-gap: 45px;
+        }
+    }
+}

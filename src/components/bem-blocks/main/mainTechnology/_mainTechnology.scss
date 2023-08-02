@@ -1,0 +1,115 @@
+#mainTechnology
+{
+    position: relative;
+}
+.main-architecture__catalog
+{
+    padding: 5rem 5.5rem 6.5rem;;
+    position: relative;
+    &> *
+    {
+        position: relative;
+        z-index: 50;
+    }
+    &::after
+    {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(245, 245, 245, 0.6);
+        box-shadow: 0px 14px 74px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(30px);
+        z-index: 10;
+    }
+    &-wrap
+    {
+        position: relative;
+        padding-top: 13.5rem;
+        height: 108rem;
+        img
+        {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    }
+
+}
+.main-technology
+{
+    &__pattern
+    {
+        &-1
+        {
+            position: absolute;
+            z-index: 10;
+            left: 11rem;
+            top: 8.5rem;
+            z-index: 0;
+        }
+        &-2
+        {
+            position: absolute;
+            z-index: 10;
+            right: 22rem;
+            top: 0;
+            z-index: 0;
+        }
+    }
+}
+@media (max-width:991px) {
+    .main-architecture__catalog
+    {
+        padding: 0;
+        margin-bottom: 30px;
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+        &::after{
+            display: none;
+        }
+        &-wrap
+        {
+            position: relative;
+            padding: 36px 22px 136px;
+
+            height: auto;
+            z-index: 50;
+            & > * 
+            {
+                position: relative;
+                z-index: 100;
+            }
+            img
+            {
+                position: relative;
+                z-index: 1;
+                height: 366px;
+            }
+        }
+    }
+    .main-technology
+    {
+        &__pattern
+        {
+            &-1
+            {
+                display: none;
+            }
+            &-2
+            {
+                right: 0;
+                top: 0;
+                z-index: -1;
+            }
+        }
+    }
+}

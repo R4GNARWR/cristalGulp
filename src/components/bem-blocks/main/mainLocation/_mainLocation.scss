@@ -1,0 +1,178 @@
+
+#mainLocationMap
+{
+    margin-top: 3.5rem;
+    height: 63.5rem;
+    position: relative;
+    z-index: 1;
+
+}
+#mainLocation
+{
+    position: relative;
+}
+.main-location
+{
+
+    &__card
+    {
+        padding: 4rem 3rem 5rem 5rem;
+        height: fit-content;
+        position: absolute;
+        right: 9rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #FFFFFF;
+        z-index: 5;
+        &-title
+        {
+            font-size: 3.4rem;
+            line-height: 3.9rem;
+            color: $primary-bg;
+            text-transform: uppercase;
+            margin-bottom: 4rem;
+        }
+        &-content
+        {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 3.5rem;
+            row-gap: 2.5rem;
+            .item
+            {
+                display: flex;
+                column-gap: 1.8rem;
+                img
+                {
+                    width: 4.8rem;
+                    height: 4.8rem;
+                    object-fit: contain;
+                }
+                .text
+                {
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                    line-height: 1.25em;
+                    color: $primary-bg;
+                }
+
+            }
+        }
+    }
+    &__crystal
+    {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: 100%;
+        position: relative;
+        img
+        {
+            height: 10rem;
+            width: 14rem;
+            object-fit: contain;
+        }
+    }
+    &__pattern
+    {
+        &-1
+        {
+            width: 27.5rem !important;
+            height: 40.5rem !important;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: translateY(40%) translateX(-25%);
+            z-index: -1;
+        }
+        &-2
+        {
+
+            position: absolute;
+            z-index: 10;
+            right: 33rem;
+            top: -2rem;
+            z-index: -1;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    #mainLocation
+    {
+        padding: 23px;
+    }
+
+    #mainLocationMap
+    {
+        margin-top: 17px;
+        height: 312px;
+    }
+    .main-location
+    {
+
+        &__wrap
+        {
+            color: $primary-bg !important;
+            z-index: 50;
+            position: relative;
+            &>*
+            {
+                z-index: 60;
+                position: relative;
+            }
+
+            &::after
+            {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(245, 245, 245, 0.38);
+                border: 1px solid #FFFFFF;
+                backdrop-filter: blur(5px);
+                z-index: 40;
+            }
+            padding: 24px 21px 21px 23px;
+
+        }
+        &__card
+        {
+            position: static;
+            width: 100%;
+            transform: translateY(0);
+            &-title
+            {
+                font-size: 18px;
+            }
+            &-content
+            {
+                .item
+                {
+                    img
+                    {
+                        width: 30px;
+                        height: 30px;
+                    }
+                    .text
+                    {
+                        font-size: 14px;
+                    }
+                }
+
+
+            }
+        }
+        &__pattern
+        {
+            &-1,
+            &-2
+            {
+                display: none;
+            }
+        }
+    }
+    
+}
